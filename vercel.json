@@ -1,5 +1,11 @@
 {
-  "env": {
-    "NEXT_TELEMETRY_DISABLED": "1"
-  }
+  "builds": [
+    {
+      "src": "./src/index.ts",
+      "use": "@vercel/node",
+      "config": {
+        "buildCommand": "tsc --noEmit --noImplicitAny false"
+      }
+    }
+  ]
 }
