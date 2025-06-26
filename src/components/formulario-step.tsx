@@ -466,7 +466,7 @@ export function FormularioStep() {
             id="valor"
             value={`R$ ${total.toLocaleString("pt-BR")}`}
             readOnly
-            className="bg-white/5 border-white/10 text-[#00D4FF] font-bold text-white placeholder:text-gray-400"
+            className="bg-white/5 border-white/10 text-[#00D4FF] font-bold placeholder:text-gray-400"
           />
         </div>
 
