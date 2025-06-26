@@ -101,7 +101,7 @@ export const OrcamentoPDFInterno: React.FC<OrcamentoPDFProps> = ({ orcamento }) 
         <Text>Nº {orcamento.id.padStart(6, "0")}   Data: {new Date(orcamento.data).toLocaleDateString("pt-BR")}   Status: {orcamento.status.toUpperCase()}</Text>
       </View>
       {/* Cliente */}
-      <View className={styles.section}>
+      <View style={styles.section}>
         <Text style={styles.subHeader}>DADOS DO CLIENTE</Text>
         <Text>Nome: {orcamento.nome}</Text>
         <Text>Telefone: {orcamento.telefone}   E-mail: {orcamento.email}</Text>
