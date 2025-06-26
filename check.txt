@@ -1,0 +1,26 @@
+Cliente 1:N Orçamentos
+
+Um cliente pode ter vários orçamentos.
+Cada orçamento pertence a um único cliente.
+Orçamento 1:N Custos Adicionais
+
+Um orçamento pode ter vários custos adicionais.
+Cada custo adicional pertence a um único orçamento.
+Orçamento N:M Materiais
+
+Um orçamento pode conter vários materiais.
+Um material pode estar em vários orçamentos.
+Para modelar isso, usamos uma tabela intermediária (ex: orcamento_itens).
+Sobre quantidade e valor:
+
+Na tabela intermediária (orcamento_itens), você armazena:
+orcamento_id (referência ao orçamento)
+material_id (referência ao material)
+quantidade (quantos daquele material vão no orçamento)
+valor (preço unitário do material no momento do orçamento)
+Assim, cada linha dessa tabela representa um material específico em um orçamento específico, com a quantidade usada e o valor unitário daquele material naquele orçamento.
+
+Exemplo prático:
+Orçamento 1 tem 10 tábuas (material 1, valor R$ 50 cada) e 2 puxadores (material 2, valor R$ 10 cada).
+Orçamento 2 também usa tábuas, mas pode ser outra quantidade ou valor.
+permite flexibilidade e histórico de preços/quantidades por orçamento, mesmo que o valor do material mude no catálogo depois.
