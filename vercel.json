@@ -1,11 +1,13 @@
 {
   "builds": [
     {
-      "src": "./src/index.ts",
-      "use": "@vercel/node",
-      "config": {
-        "buildCommand": "tsc --noEmit --noImplicitAny false"
-      }
+      "src": "package.json",
+      "use": "@vercel/next"
     }
-  ]
+  ],
+  "build": {
+    "env": {
+      "NEXT_TYPESCRIPT_NO_IMPLICIT_ANY": "false"
+    }
+  }
 }
