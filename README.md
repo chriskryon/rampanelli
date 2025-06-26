@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rampanelli Planejados
 
-## Getting Started
+Sistema moderno de gerenciamento de orçamentos para móveis planejados, desenvolvido com Next.js, React, TypeScript e shadcn/ui. O projeto permite criar, editar, visualizar e exportar orçamentos profissionais em PDF, com experiência de usuário moderna e responsiva.
 
-First, run the development server:
+## Funcionalidades
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Autenticação de usuários**
+- **Cadastro e seleção de clientes** com autocomplete
+- **Gerenciamento de materiais** (CRUD, catálogo dinâmico)
+- **Criação e edição de orçamentos** com múltiplos itens, mão de obra e custos adicionais
+- **Validação de formulários** com feedback visual
+- **Notificações (toasts)** usando shadcn/ui (Sonner)
+- **Exportação de orçamentos em PDF** (layout moderno, logo, multi-página)
+- **Persistência local** (localStorage) para dados de orçamentos e materiais
+- **UI/UX moderna** com animações, dark mode e responsividade
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Estrutura de Pastas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `src/app/` — Rotas e páginas do Next.js
+- `src/components/` — Componentes reutilizáveis (formulários, UI, PDF, etc.)
+- `src/contexts/` — Providers e contextos globais (auth, orçamentos, clientes)
+- `src/services/` — Serviços de dados (CRUD, localStorage)
+- `src/types/` — Tipos e interfaces TypeScript
+- `src/lib/` — Utilitários e componentes de geração de PDF
+- `src/mocks/` — Dados mockados para desenvolvimento
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tecnologias Utilizadas
 
-## Learn More
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [shadcn/ui](https://ui.shadcn.com/) (Sonner, Dialog, Button, etc.)
+- [React Hook Form](https://react-hook-form.com/)
+- [React PDF](https://react-pdf.org/)
+- [Framer Motion](https://www.framer.com/motion/)
 
-To learn more about Next.js, take a look at the following resources:
+## Como rodar o projeto
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Instale as dependências:
+   ```bash
+   npm install
+   ```
+2. Rode o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+3. Acesse em [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Observações
 
-## Deploy on Vercel
+- O projeto utiliza localStorage para persistência local, mas pode ser facilmente adaptado para backend/API.
+- O layout dos PDFs pode ser customizado em `src/lib/OrcamentoPDFCliente.tsx` e `src/lib/OrcamentoPDFInterno.tsx`.
+- Toasts e notificações utilizam o padrão shadcn/ui (Sonner).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Licença
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
